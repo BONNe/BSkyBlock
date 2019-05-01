@@ -4,7 +4,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.World.Environment;
@@ -36,14 +35,9 @@ public class ChunkGeneratorWorld extends ChunkGenerator {
     @Override
     public ChunkData generateChunkData(World world, Random random, int chunkX, int chunkZ, ChunkGenerator.BiomeGrid biomeGrid) {
         this.rand = random;
-        /*
-         * TODO: Put back in when nether height is fixed on server.
-         * https://hub.spigotmc.org/jira/browse/SPIGOT-4799
-         *
         if (world.getEnvironment().equals(World.Environment.NETHER) && addon.getSettings().isNetherRoof()) {
             return generateNetherRoofChunks(world, random);
         }
-         */
         ChunkData result = createChunkData(world);
         if (!world.getEnvironment().equals(Environment.NORMAL)) {
             return result;
