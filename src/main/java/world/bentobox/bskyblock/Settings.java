@@ -28,7 +28,7 @@ import world.bentobox.bentobox.database.objects.adapters.FlagSerializer2;
  */
 @StoreAt(filename="config.yml", path="addons/BSkyBlock") // Explicitly call out what name this should have.
 @ConfigComment("BSkyBlock Configuration [version]")
-public class Settings implements DataObject, WorldSettings {
+public class Settings implements WorldSettings {
 
     /* Commands */
     @ConfigComment("Island Command. What command users will run to access their island.")
