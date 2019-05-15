@@ -74,7 +74,7 @@ public class BSkyBlock extends GameModeAddon {
 
     @Override
     public void createWorlds() {
-        String worldName = settings.getWorldName();
+        String worldName = settings.getWorldName().toLowerCase();
         if (getServer().getWorld(worldName) == null) {
             log("Creating BSkyBlock world ...");
         }
